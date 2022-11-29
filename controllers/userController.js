@@ -1,7 +1,7 @@
 const { User, Thought } = require("../models");
 
 module.exports = {
-    getsingleUser(req, res) {
+    getSingleUser(req, res) {
         User.findone({ _id: req.params.userId })
             .populate({ path: 'thoughts', select: '-__v' })
             .populate({ path: 'friends', select: '-__v' })
@@ -16,7 +16,7 @@ module.exports = {
 
     },
 
-    getAllUsers(req, res) {
+    getUser(req, res) {
         User.find({})
             .then((user) => res.json(user))
             .catch((err) => res.status(500).json(err));
