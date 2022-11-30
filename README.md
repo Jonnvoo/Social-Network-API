@@ -9,7 +9,6 @@
 - [Installation](#Acceptance-Criteria)
 - [Usage](#usage)
 - [ScreenShots](#screenshots)
-- [Credits](#credits)
 - [Features](#features)
 - [Contribution](#contribution)
 - [Test](#test)
@@ -59,8 +58,6 @@ UPDATE Route Example
 DELETE Route Example
 ![ ScreenShot](./assets/Delete%20Thought.PNG)
 
-## Credits
-No collaborators
 
 ## Features
 no features
