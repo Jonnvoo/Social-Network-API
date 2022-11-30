@@ -1,12 +1,13 @@
 const { User, Thought } = require('../models')
-
+// This exports our functions so that we can use them in our routes
 module.exports = {
+    // This grabs all the thoughts in the DB
     getThoughts(req, res) {
         Thought.find()
             .then((thoughts) => res.json(thoughts))
             .catch((err) => res.status(500).json(err));
     },
-
+    // This grabs a single thought from the ID
     getSingleThought(req, res) {
         Thought.findOne({ _id: req.params.thoughtId })
             .select("-__v")
@@ -18,7 +19,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-
+    //Creates a new thought for the user
     createThought(req, res) {
         Thought.create(req.body)
             .then(({ _id }) => {
@@ -33,7 +34,7 @@ module.exports = {
     },
 
     updateThought(req, res) {
-        Thought.findOneAndUpdate({ _id: req.params.thought }, { $set: req.body }, { runValidators: true, New: True }
+        Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { runValidators: true, new: true }
         )
             .then((user) =>
                 !user
