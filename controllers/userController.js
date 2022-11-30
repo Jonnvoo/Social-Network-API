@@ -1,5 +1,5 @@
 const { User, Thought } = require("../models");
-
+// This exports our functions so that we can use them in our routes.
 module.exports = {
     //Grabs a single user by ID
     getSingleUser(req, res) {

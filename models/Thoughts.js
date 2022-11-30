@@ -19,6 +19,7 @@ const reactionSchema = new Schema(
       createdAt: {
         type: Date,
         default: Date.now,
+         // This uses moment to fromat the date created
         get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
       },
     },
@@ -43,6 +44,7 @@ const thoughtsSchema= new Schema(
         createdAt:{
             type: Date,
             default: Date.now,
+            // This uses moment to fromat the date created
             get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
         },
         reactions: [reactionSchema]

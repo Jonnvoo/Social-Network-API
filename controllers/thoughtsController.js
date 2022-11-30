@@ -32,7 +32,7 @@ module.exports = {
             )
             .catch((err) => res.status(500).json(err));
     },
-
+    // Updates a thought that already in the DB
     updateThought(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { runValidators: true, new: true }
         )
@@ -43,7 +43,7 @@ module.exports = {
             )
             .catch((err) => res.status(500).json(err));
     },
-
+    // Deletes the thought through the ID
     deleteThought(req, res) {
         Thought.findOneAndDelete({ _id: req.params.thoughtId })
             .then((thought) =>
@@ -59,7 +59,7 @@ module.exports = {
             )
             .catch((err) => res.status(500).json(err));
     },
-
+    //Creates a new Reaction
     createReaction(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $addToSet: { reactions: req.body } }, { runValidators: true, new: true })
             .then((thought) =>
@@ -71,7 +71,7 @@ module.exports = {
 
 
     },
-
+    // Deletes a Reaction through the ID
     deleteReaction(req, res) {
         Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $pull: { reactions: req.body } }, { runValidators: true, new: true })
             .then((thought) =>

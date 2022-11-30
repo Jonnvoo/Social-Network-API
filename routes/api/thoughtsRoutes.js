@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+// Grabs our functions we created and adds them to a route
 const {
     getThoughts,
     getSingleThought,
