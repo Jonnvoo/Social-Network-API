@@ -16,7 +16,7 @@
 
 
 ## Description
-This project uses MonogoDB, Mongoose.js, and Express.js. This server is an backend API used for socializing with other people by create thoughts and reactions to posts. For the server it uses mongoDB for data storage instead of SQL and it uses mongoose to set up the models.
+This project uses MonogoDB, Mongoose.js, and Express.js. This server is an backend API used for socializing with other people by create thoughts and reactions to posts. For the server it uses mongoDB for data storage instead of SQL and it uses mongoose to set up the models. With this API it allows users to pull data from monogoDB as well as add more information to the data base. Mongo is just another DB like SQL it has same functions just uses different DBs.
 
 ## User Story
 AS A social media startup</br>
